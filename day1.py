@@ -1,6 +1,6 @@
 
 
-file = open(r"./input11")
+file = open(r"./input1")
 elf = 1
 elves = {}
 total_cals = 0
@@ -20,3 +20,5 @@ print(max(elves.values()))
 
 sorted = sorted(elves, key=elves.get, reverse=True)
 print (elves[sorted[0]] + elves[sorted[1]] + elves[sorted[2]])
+
+file.close()
