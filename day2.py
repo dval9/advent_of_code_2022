@@ -41,7 +41,7 @@ file.close()
 file = open(r"./input2")
 score = 0
 
-for line in file:    
+for line in file:
     fight = line.rstrip()
 
     if fight[0] == opponent_rock:

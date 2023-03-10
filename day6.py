@@ -3,7 +3,7 @@
 file = open(r"./input6")
 i = 4
 
-for line in file:    
+for line in file:
     s = list(line.rstrip())
 
     while len(s) > 4:
@@ -21,7 +21,7 @@ file.close()
 file = open(r"./input6")
 i = 14
 
-for line in file:    
+for line in file:
     s = list(line.rstrip())
 
     while len(s) > 14:

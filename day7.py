@@ -8,7 +8,7 @@ dirs = {'/'.join(str(x) for x in path): 0}
 
 for line in file:
     s = line.rstrip().split(' ')
-    
+
     if s[0] == '$':
         if s[1] == 'ls':
             pass
@@ -29,12 +29,12 @@ for line in file:
 
 for k, v in dirs.items():
     if v < 100000:
-        i += v;
+        i += v
 
 print(i)
 file.close()
 
-space_target = dirs['/']  - (70000000 - 30000000)
+space_target = dirs['/'] - (70000000 - 30000000)
 sorted = sorted(dirs, key=dirs.get)
 
 i = 0
