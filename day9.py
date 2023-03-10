@@ -83,6 +83,7 @@ file.close()
 def update_pos():
     pos[knots[num_knots - 1][0]][knots[num_knots - 1][1]] = 1
 
+
 file = open(r"./input9")
 i = 0
 pos = [[0 for x in range(500)] for y in range(500)]
@@ -125,4 +126,30 @@ for line in file:
 i = sum(map(sum, pos))
 
 print(i)
+file.close()
+
+
+file = open(r"./input9")
+# stole this
+rope = [0] * 10
+seen = [set([x]) for x in rope]
+dirs = {'L': +1, 'R': -1, 'D': 1j, 'U': -1j}
+
+
+def sign(x): return complex((x.real > 0) -
+                            (x.real < 0), (x.imag > 0) - (x.imag < 0))
+
+
+for line in file:
+    for _ in range(int(line[2:])):
+        rope[0] += dirs[line[0]]
+
+        for i in range(1, 10):
+            dist = rope[i-1] - rope[i]
+            if abs(dist) >= 2:
+                rope[i] += sign(dist)
+                seen[i].add(rope[i])
+
+print(len(seen[1]), len(seen[9]))
+
 file.close()
