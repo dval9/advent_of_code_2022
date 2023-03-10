@@ -3,7 +3,8 @@
 file = open(r"./input3")
 priority_sum = 0
 
-def calculate_prio(a,b):
+
+def calculate_prio(a, b):
     priority = 0
     for c in a:
         for d in b:
@@ -15,7 +16,8 @@ def calculate_prio(a,b):
                 return priority
     return priority
 
-def find_badge(a,b,c):
+
+def find_badge(a, b, c):
     priority = 0
     for d in a:
         for e in b:
@@ -29,14 +31,15 @@ def find_badge(a,b,c):
                         return priority
     return priority
 
-for line in file:    
+
+for line in file:
     backpack = line.rstrip()
-    
+
     a = backpack[:len(backpack)//2]
     b = backpack[len(backpack)//2:]
 
-    priority_sum += calculate_prio(a,b)
-                
+    priority_sum += calculate_prio(a, b)
+
 print(priority_sum)
 file.close()
 
@@ -46,9 +49,9 @@ priority_sum = 0
 bag_count = 0
 bags = []
 
-for line in file:    
+for line in file:
     backpack = line.rstrip()
-    
+
     bags.append(backpack)
     bag_count += 1
 
