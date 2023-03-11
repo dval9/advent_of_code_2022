@@ -34,7 +34,7 @@ class Monkey:
                 self.items[0] += int(op[2])
 
         # self.items[0] = self.items[0] // 3
-        self.items[0] = self.items[0] % (3*11*7*2*19*5*17*13)# (23*19*13*17)
+        self.items[0] = self.items[0] % (3*11*7*2*19*5*17*13)  # (23*19*13*17)
 
     def throw(self):
         if len(self.items) == 0:
