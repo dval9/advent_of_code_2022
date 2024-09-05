@@ -1,13 +1,11 @@
 
-
-#file = open(r"./input3")
+file = open(r"./input16")
 i = 0
 
-for line in file:    
+for line in file:
     s = line.rstrip()
 
-  
 
 
 print(i)
-#file.close()
+file.close()
